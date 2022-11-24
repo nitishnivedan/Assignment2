@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./styles.css";
 import logo from "../logo/React.webp";
 import usericon from "../logo/usericon.png";
