@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  border: 1px black solid;
+  padding: 20px;
+}
+
+.headerComponents {
+  width: 34%;
+  margin-left: 5%;
+}
+
+.searchComponentClass {
+  width: 50%;
+}
+
+.inputClassName {
+  width: 300px;
+  padding: 10px;
+}
+
+.searchIconClass {
+  border: 1px black solid;
+  padding: 10px;
+  position: relative;
+  top: 15px;
+  right: 2px;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+}

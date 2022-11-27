@@ -1,0 +1,22 @@
+.CardWrapper {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 20%;
+  border: 1px black solid;
+}
+
+.information-class {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.imageClass {
+  width: 50%;
+  height: 50%;
+  margin-left: 30%;
+}

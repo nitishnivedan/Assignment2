@@ -32,7 +32,7 @@ const Heading = () => (
   <div className="wrapper">
     <h1>First Header using functional Component</h1>
     <h2>Second Header using functional Component</h2>
-    <h3> Third Header using functional Component</h3>
+    <h3> Third Header using functional Componentsss</h3>
     <ChildComponent />
     {/* {ChildComponent} -> Warning: Functions are not valid as a React child. This
     may happen if you return a Component instead of from render. Or maybe you
@@ -44,7 +44,7 @@ const Heading = () => (
   </div>
 );
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("roots"));
 root.render(
   <>
     <Header />
