@@ -1,6 +1,6 @@
-import "./styles.css";
-
 import { useState } from "react";
+
+import "./styles.css";
 
 const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const [nameOrDesignation, setNameOrDesignation] = useState("");
