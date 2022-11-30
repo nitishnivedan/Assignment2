@@ -1,7 +1,6 @@
 import React from "react";
 
-import styles from "./styles-card.css";
-import logo from "../../logo/usericon.png";
+import "./styles-card.css";
 
 const CardComponent = ({ temmatesDetails }) => (
   <div className="CardWrapper">
