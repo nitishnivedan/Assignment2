@@ -1,3 +1,7 @@
 .wrapper {
   background-color: blue;
 }
+
+#roots {
+  display: none;
+}
