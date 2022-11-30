@@ -1,0 +1,18 @@
+.searchClass {
+  padding: 20px;
+  margin-left: 30%;
+}
+
+.searchClass > input {
+  width: 400px;
+  height: 50px;
+}
+
+.buttonClass {
+  margin-left: 20px;
+  height: 50px;
+  width: 100px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 20px;
+}
