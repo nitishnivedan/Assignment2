@@ -5,6 +5,7 @@ import SearchComponent from "../SearchComponent";
 import CardComponent from "../CardComponent";
 import NotFoundComponent from "../NothingFoundComponent";
 import teamInformation from "../../common/data.json";
+import { getUserInfo } from "../../apis/userapis";
 
 const RootElement = () => {
   const [currentCards, setCurrentCards] = useState(teamInformation);
@@ -24,14 +25,8 @@ const RootElement = () => {
       "ap221882",
       "akshaymarch7",
     ];
-    let users = await Promise.all(
-      userNames.map(async (userNamesInstances) => {
-        const userInformation = await fetch(
-          `https://api.github.com/users/${userNamesInstances}`
-        );
-        return await userInformation.json();
-      })
-    );
+
+    let users = await getUserInfo(userNames);
     users =
       users &&
       users.map((modifyUserKeys) => ({
@@ -45,7 +40,7 @@ const RootElement = () => {
     if (users.length > 0) {
       setIsDataFetched(true);
     }
-    //const userInformation = await users.json();
+
     setCurrentCards(users);
     setFullInfoOfUsers(users);
   };

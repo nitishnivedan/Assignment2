@@ -5,24 +5,23 @@ import "./styles.css";
 const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const [nameOrDesignation, setNameOrDesignation] = useState("");
 
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    setCurrentCards(
+      teamInformation.filter(
+        (item) =>
+          (item.name &&
+            item.name
+              .toUpperCase()
+              .includes(nameOrDesignation.toUpperCase())) ||
+          (item.designaton &&
+            String(item.designaton).includes(nameOrDesignation))
+      )
+    );
+  };
+
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        debugger;
-        setCurrentCards(
-          teamInformation.filter(
-            (item) =>
-              (item.name &&
-                item.name
-                  .toUpperCase()
-                  .includes(nameOrDesignation.toUpperCase())) ||
-              (item.designaton &&
-                String(item.designaton).includes(nameOrDesignation))
-          )
-        );
-      }}
-    >
+    <form onSubmit={handleOnSubmit}>
       <div className="searchClass">
         <input
           type="text"
