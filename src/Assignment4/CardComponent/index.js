@@ -11,7 +11,7 @@ const CardComponent = ({
     <div className="information-class">Name : {name}</div>
     <div className="information-class">Place: {location}</div>
     <div className="information-class">Company: {company}</div>
-    <div className="information-class">Designation: {designaton}</div>
+    <div className="information-class">Followers: {designaton}</div>
   </div>
 );
 
