@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Nitish Nivedan Barik",
+    "company": "Accenture",
+    "designaton": "Team Lead",
+    "location": "Odisha",
+    "id": "1",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Iswarya",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "2",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Smriti",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "3",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Shaksham",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "4",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Shekhawat",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "5",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Simran",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "6",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Sireesha",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "7",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Vamshi",
+    "company": "Accenture",
+    "designaton": "Software Engineer Lead",
+    "location": "bangalore",
+    "id": "8",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  },
+  {
+    "name": "Kalyan",
+    "company": "Accenture",
+    "designaton": "Software Engineer",
+    "location": "bangalore",
+    "id": "9",
+    "imageSource": "https://cdn1.iconfinder.com/data/icons/information-technology-17/1700/9303_-_Programmer-256.png"
+  }
+]
