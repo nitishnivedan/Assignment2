@@ -6,6 +6,7 @@ import CardComponent from "../CardComponent";
 import NotFoundComponent from "../NothingFoundComponent";
 import teamInformation from "../../common/data.json";
 import { getUserInfo } from "../../apis/userapis";
+import "./styles.css";
 
 const RootElement = () => {
   const [currentCards, setCurrentCards] = useState(teamInformation);
@@ -52,13 +53,16 @@ const RootElement = () => {
         setCurrentCards={setCurrentCards}
         teamInformation={isDataFetched ? fullInfoOfUsers : teamInformation}
       />
+
       {currentCards && currentCards.length > 0 ? (
-        currentCards.map((temmatesDetails) => (
-          <CardComponent
-            key={temmatesDetails.id}
-            temmatesDetails={temmatesDetails}
-          />
-        ))
+        <div className="bottomDiv">
+          {currentCards.map((temmatesDetails) => (
+            <CardComponent
+              key={temmatesDetails.id}
+              temmatesDetails={temmatesDetails}
+            />
+          ))}
+        </div>
       ) : (
         <NotFoundComponent />
       )}
