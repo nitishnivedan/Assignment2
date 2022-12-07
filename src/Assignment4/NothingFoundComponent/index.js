@@ -3,8 +3,8 @@ import React from "react";
 import userIcon from "../../logo/userIcon.png";
 import "../CardComponent/styles-card.css";
 
-const CardComponent = ({}) => (
-  <div className="CardWrapper">
+const CardComponent = () => (
+  <div className="cardWrapper">
     <img src={userIcon} className="imageClass" alt={userIcon} />{" "}
     <div className="information-class">Name : Not found</div>
     <div className="information-class">Place: NA</div>

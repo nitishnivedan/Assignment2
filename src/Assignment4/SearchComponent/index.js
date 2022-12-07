@@ -14,8 +14,7 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
             item.name
               .toUpperCase()
               .includes(nameOrDesignation.toUpperCase())) ||
-          (item.designaton &&
-            String(item.designaton).includes(nameOrDesignation))
+          (item.followers && String(item.followers).includes(nameOrDesignation))
       )
     );
   };

@@ -1,3 +1,5 @@
+// getUserInfo -> github api to get userInfo
+
 export const getUserInfo = async (userNames) =>
   await Promise.all(
     userNames.map(async (userNamesInstances) => {

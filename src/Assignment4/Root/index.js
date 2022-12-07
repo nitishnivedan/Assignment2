@@ -30,13 +30,13 @@ const RootElement = () => {
     let users = await getUserInfo(userNames);
     users =
       users &&
-      users.map((modifyUserKeys) => ({
-        imageSource: modifyUserKeys.avatar_url,
-        name: modifyUserKeys.name,
-        location: modifyUserKeys.location,
-        company: modifyUserKeys.company,
-        designaton: modifyUserKeys.followers,
-        id: modifyUserKeys.login,
+      users.map((userInfo) => ({
+        imageSource: userInfo.avatar_url,
+        name: userInfo.name,
+        location: userInfo.location,
+        company: userInfo.company,
+        followers: userInfo.followers,
+        id: userInfo.login,
       }));
     if (users.length > 0) {
       setIsDataFetched(true);
