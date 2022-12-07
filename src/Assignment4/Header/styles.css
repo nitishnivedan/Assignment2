@@ -1,7 +1,8 @@
 .header {
   display: flex;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   padding: 20px;
+  box-shadow: 0 7px 29px #64646f33;
 }
 
 .headerComponents {

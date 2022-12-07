@@ -1,11 +1,18 @@
-.CardWrapper {
-  display: inline-block;
+.cardWrapper {
   padding: 10px;
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
   width: 20%;
-  border: 1px black solid;
+  /* border: 1px black solid; */
+  box-shadow: 0 7px 29px #64646f33;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.cardWrapper:hover {
+  /* background-color: #FFE1E1; */
+  transform: scale(1.03);
 }
 
 .information-class {
