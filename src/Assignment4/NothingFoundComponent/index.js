@@ -1,10 +1,10 @@
 import React from "react";
 
 import userIcon from "../../logo/userIcon.png";
-import "../CardComponent/styles-card.css";
+import "./stylesnotfound.css";
 
 const CardComponent = () => (
-  <div className="cardWrapper">
+  <div className="cardWrapperForNotFound">
     <img src={userIcon} className="imageClass" alt={userIcon} />{" "}
     <div className="information-class">Name : Not found</div>
     <div className="information-class">Place: NA</div>
