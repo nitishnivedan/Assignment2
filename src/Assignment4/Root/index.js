@@ -56,7 +56,7 @@ const RootElement = () => {
       {currentCards && currentCards.length > 0 ? (
         <div className="bottomDiv">
           {currentCards.map((temmatesDetails) => (
-            <Link to={`/user/${temmatesDetails.id}`}>
+            <Link to={`/user/${temmatesDetails.id}`} key={temmatesDetails.id}>
               <CardComponent
                 key={temmatesDetails.id}
                 temmatesDetails={temmatesDetails}

@@ -13,7 +13,7 @@ const CardComponent = ({
         src={imageSource}
         className="imageClass"
         alt={userIcon}
-      />{" "}
+      />
       <div className="information-class">Name : {name}</div>
       <div className="information-class">Place: {location}</div>
       <div className="information-class">Company: {company}</div>

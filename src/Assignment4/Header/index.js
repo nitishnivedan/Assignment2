@@ -5,7 +5,7 @@ import logo from "../../logo/React.webp";
 import usericon from "../../logo/usericon.png";
 import searchicon from "../../logo/searchicon.png";
 
-const Header = ({}) => (
+const Header = () => (
   <>
     <div className="header">
       <div className="headerComponents">

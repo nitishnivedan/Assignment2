@@ -5,7 +5,7 @@ const ErrorComponent = () => {
   return (
     <>
       <h1>Error Component</h1>
-      <h2> Error : {errorData.statusText}</h2>
+      <h2> Error : {errorData.statusText || errorData.message}</h2>
     </>
   );
 };

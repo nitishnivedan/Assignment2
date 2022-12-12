@@ -26,7 +26,7 @@ const SearchComponent = () => {
         id: userInfo.login,
       }));
 
-    if (response.length > 0) {
+    if (response.length) {
       setCurrentCards(user);
     }
   };
