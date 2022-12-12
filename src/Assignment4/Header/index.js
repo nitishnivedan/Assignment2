@@ -2,8 +2,6 @@ import { Outlet } from "react-router-dom";
 
 import "./styles.css";
 import logo from "../../logo/React.webp";
-import usericon from "../../logo/usericon.png";
-import searchicon from "../../logo/searchicon.png";
 
 const Header = () => (
   <>
