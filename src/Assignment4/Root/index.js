@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import Header from "../Header";
 import SearchComponent from "../SearchComponent";
 import CardComponent from "../CardComponent";
 import NotFoundComponent from "../NothingFoundComponent";
@@ -48,7 +48,6 @@ const RootElement = () => {
 
   return (
     <>
-      <Header />
       <SearchComponent
         setCurrentCards={setCurrentCards}
         teamInformation={isDataFetched ? fullInfoOfUsers : teamInformation}
@@ -57,10 +56,12 @@ const RootElement = () => {
       {currentCards && currentCards.length > 0 ? (
         <div className="bottomDiv">
           {currentCards.map((temmatesDetails) => (
-            <CardComponent
-              key={temmatesDetails.id}
-              temmatesDetails={temmatesDetails}
-            />
+            <Link to={`/user/${temmatesDetails.id}`} key={temmatesDetails.id}>
+              <CardComponent
+                key={temmatesDetails.id}
+                temmatesDetails={temmatesDetails}
+              />
+            </Link>
           ))}
         </div>
       ) : (
