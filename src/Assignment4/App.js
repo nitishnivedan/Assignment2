@@ -5,6 +5,8 @@ import RootElement from "./Root";
 import ErrorComponent from "./ErrorComponent";
 import HeaderComponent from "./Header";
 import SpecificUserComponent from "./SpecificUserComponent";
+import AboutMe from "./AboutMe";
+import ProfileComponent from "./ProfileComponent";
 
 const appRouter = createBrowserRouter([
   {
@@ -19,6 +21,16 @@ const appRouter = createBrowserRouter([
       {
         path: "/user/:id",
         element: <SpecificUserComponent />,
+      },
+      {
+        path: "/about-me",
+        element: <AboutMe />,
+        children: [
+          {
+            path: "/about-me/profile", // path here can be written as /about-me/profile or profile.
+            element: <ProfileComponent parentName="AboutMe" />,
+          },
+        ],
       },
     ],
   },
