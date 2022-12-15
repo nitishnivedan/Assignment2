@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import stateCity from "../../common/utils/state-city.json";
 
 const getCity = (state) => {
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState(["select"]);
   useEffect(() => {
     //getCity(state);  //commented the api since it was getting blocked
-    setCities(stateCity[state]);
+    if (state) {
+      setCities(stateCity[state]);
+    }
   }, [state]);
 
   const getCity = async (state) => {

@@ -1,6 +1,6 @@
 {
   "Select": ["Select"],
-  "Andaman and Nicobar Islands": ["Port Blair*"],
+  "Andaman and Nicobar Islands": ["Select", "Port Blair*"],
   "Andhra Pradesh": [
     "Select",
     "Adoni",
@@ -89,6 +89,7 @@
   ],
   "Arunachal Pradesh": ["Select", "Naharlagun", "Pasighat"],
   "Assam": [
+    "Select",
     "Barpeta",
     "Bongaigaon City",
     "Dhubri",
@@ -116,6 +117,7 @@
     "Tinsukia"
   ],
   "Bihar": [
+    "Select",
     "Araria",
     "Arrah",
     "Arwal",
@@ -187,8 +189,9 @@
     "Supaul",
     "Warisaliganj"
   ],
-  "Chandigarh": ["Chandigarh*"],
+  "Chandigarh": ["Select", "Chandigarh*"],
   "Chhattisgarh": [
+    "Select",
     "Ambikapur",
     "Bhatapara",
     "Bhilai Nagar",
@@ -209,10 +212,11 @@
     "Sakti",
     "Tilda Newra"
   ],
-  "Dadra and Nagar Haveli": ["Silvassa*"],
-  "Delhi": ["Delhi", "New Delhi*"],
-  "Goa": ["Mapusa", "Margao", "Marmagao", "Panaji*"],
+  "Dadra and Nagar Haveli": ["Select", "Silvassa*"],
+  "Delhi": ["Select", "Delhi", "New Delhi*"],
+  "Goa": ["Select", "Mapusa", "Margao", "Marmagao", "Panaji*"],
   "Gujarat": [
+    "Select",
     "Adalaj",
     "Ahmedabad",
     "Amreli",
@@ -287,6 +291,7 @@
     "Wankaner"
   ],
   "Haryana": [
+    "Select",
     "Bahadurgarh",
     "Bhiwani",
     "Charkhi Dadri",
@@ -326,6 +331,7 @@
     "Yamunanagar"
   ],
   "Himachal Pradesh": [
+    "Select",
     "Mandi",
     "Nahan",
     "Palampur",
@@ -334,6 +340,7 @@
     "Sundarnagar"
   ],
   "Jammu and Kashmir": [
+    "Select",
     "Anantnag",
     "Baramula",
     "Jammu",
@@ -345,6 +352,7 @@
     "Udhampur"
   ],
   "Jharkhand": [
+    "Select",
     "Adityapur",
     "Bokaro Steel City",
     "Chaibasa",
@@ -374,6 +382,7 @@
     "Tenu dam-cum-Kathhara"
   ],
   "Karnataka": [
+    "Select",
     "Adyar",
     "Afzalpur",
     "Arsikere",
@@ -452,10 +461,11 @@
     "Udupi",
     "Vijayapura",
     "Wadi",
-    "Yadgir"
+    "Yadgir",
+    "Mysore"
   ],
-  "Karnatka": ["Mysore"],
   "Kerala": [
+    "Select",
     "Adoor",
     "Alappuzha",
     "Attingal",
@@ -509,6 +519,7 @@
     "Vatakara"
   ],
   "Madhya Pradesh": [
+    "Select",
     "Alirajpur",
     "Ashok Nagar",
     "Balaghat",
@@ -593,7 +604,7 @@
     "Wara Seoni"
   ],
   "Maharashtra": [
-    "[[]]",
+    "Select",
     "Ahmednagar",
     "Akola",
     "Akot",
@@ -716,10 +727,11 @@
     "Yawal",
     "Yevla"
   ],
-  "Manipur": ["Imphal*", "Lilong", "Mayang Imphal", "Thoubal"],
-  "Meghalaya": ["Nongstoin", "Shillong*", "Tura"],
-  "Mizoram": ["Aizawl", "Lunglei", "Saiha"],
+  "Manipur": ["Select", "Imphal*", "Lilong", "Mayang Imphal", "Thoubal"],
+  "Meghalaya": ["Select", "Nongstoin", "Shillong*", "Tura"],
+  "Mizoram": ["Select", "Aizawl", "Lunglei", "Saiha"],
   "Nagaland": [
+    "Select",
     "Dimapur",
     "Kohima*",
     "Mokokchung",
@@ -728,6 +740,7 @@
     "Zunheboto"
   ],
   "Odisha": [
+    "Select",
     "Balangir",
     "Baleshwar Town",
     "Barbil",
@@ -763,8 +776,9 @@
     "Tarbha",
     "Titlagarh"
   ],
-  "Puducherry": ["Karaikal", "Mahe", "Pondicherry*", "Yanam"],
+  "Puducherry": ["Select", "Karaikal", "Mahe", "Pondicherry*", "Yanam"],
   "Punjab": [
+    "Select",
     "Amritsar",
     "Barnala",
     "Batala",
@@ -821,6 +835,7 @@
     "Zirakpur"
   ],
   "Rajasthan": [
+    "Select",
     "Ajmer",
     "Alwar",
     "Bikaner",
@@ -898,6 +913,7 @@
     "Vijainagar, Ajmer"
   ],
   "Tamil Nadu": [
+    "Select",
     "Arakkonam",
     "Aruppukkottai",
     "Chennai*",
@@ -1012,6 +1028,7 @@
     "Viswanatham"
   ],
   "Telangana": [
+    "Select",
     "Adilabad",
     "Bellampalle",
     "Bhadrachalam",
@@ -1054,7 +1071,8 @@
     "Yellandu"
   ],
   "Tripura": [
-    "Agartala*",
+    "Select",
+    "Agartala",
     "Belonia",
     "Dharmanagar",
     "Kailasahar",
@@ -1063,6 +1081,7 @@
     "Udaipur"
   ],
   "Uttar Pradesh": [
+    "Select",
     "Achhnera",
     "Agra",
     "Aligarh",
@@ -1183,6 +1202,7 @@
     "Zamania"
   ],
   "Uttarakhand": [
+    "Select",
     "Bageshwar",
     "Dehradun",
     "Haldwani-cum-Kathgodam",
@@ -1203,6 +1223,7 @@
     "Tehri"
   ],
   "West Bengal": [
+    "Select",
     "Adra",
     "Alipurduar",
     "Arambagh",

@@ -25,7 +25,8 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
         )
       );
     } else {
-      getSpecificCityUsers(cityName);
+      if (cityName && cityName !== "Select") getSpecificCityUsers(cityName);
+      else alert("City Not selected");
     }
   };
 
@@ -50,12 +51,12 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
 
   const handleStateChange = (e) => {
     setState(e.target.value);
+    setCityName("");
   };
 
   const handleCityChange = (e) => {
     setCityName(e.target.value);
   };
-
   return (
     <form onSubmit={handleOnSubmit}>
       <div className="searchClass">
