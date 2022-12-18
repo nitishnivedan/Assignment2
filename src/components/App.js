@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -5,8 +6,9 @@ import RootElement from "./Root";
 import ErrorComponent from "./ErrorComponent";
 import HeaderComponent from "./Header";
 import SpecificUserComponent from "./SpecificUserComponent";
-import AboutMe from "./AboutMe";
 import ProfileComponent from "./ProfileComponent";
+
+const AboutMe = lazy(() => import("./AboutMe"));
 
 const appRouter = createBrowserRouter([
   {
@@ -24,7 +26,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about-me",
-        element: <AboutMe />,
+        element: (
+          <Suspense fallback={<h1>Loading......</h1>}>
+            <AboutMe />
+          </Suspense>
+        ),
         children: [
           {
             path: "/about-me/profile", // path here can be written as /about-me/profile or profile.
