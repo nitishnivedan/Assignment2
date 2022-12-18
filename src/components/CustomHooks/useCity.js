@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import stateCity from "../../common/utils/state-city.json";
 
-const getCity = (state) => {
+const useCity = (state) => {
   const [cities, setCities] = useState(["select"]);
   useEffect(() => {
     //getCity(state);  //commented the api since it was getting blocked
@@ -30,4 +30,4 @@ const getCity = (state) => {
   return cities;
 };
 
-export default getCity;
+export default useCity;

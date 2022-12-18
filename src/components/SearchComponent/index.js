@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./styles.css";
-import getCity from "../CustomHooks/useCity";
+import useCity from "../CustomHooks/useCity";
 import StateCityInformation from "../../common/utils/state-city.json";
 
 const SearchComponent = ({ setCurrentCards, teamInformation }) => {
@@ -9,7 +9,7 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const [state, setState] = useState("");
   const [cityName, setCityName] = useState("");
 
-  const city = getCity(state);
+  const city = useCity(state);
   const handleOnSubmit = (event) => {
     event.preventDefault();
     if (!cityName) {
@@ -68,7 +68,9 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
             setCityName("");
           }}
         />
-        <button className="buttonClass">Search</button>
+        <button type="submit" className="buttonClass">
+          Search
+        </button>
       </div>
 
       <select className="stateClass" value={state} onChange={handleStateChange}>

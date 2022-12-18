@@ -6,7 +6,6 @@ import RootElement from "./Root";
 import ErrorComponent from "./ErrorComponent";
 import HeaderComponent from "./Header";
 import SpecificUserComponent from "./SpecificUserComponent";
-//import AboutMe from "./AboutMe";
 import ProfileComponent from "./ProfileComponent";
 
 const AboutMe = lazy(() => import("./AboutMe"));
