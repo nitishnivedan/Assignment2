@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
+
+import ThemeContext from "../ThemeContext";
 
 class AboutMe extends React.Component {
   constructor(props) {
@@ -21,11 +23,17 @@ class AboutMe extends React.Component {
 
   render() {
     const { teamName, componentType } = this.state;
+
     console.log("render called of Parent");
     return (
       <>
         <h1>This page is about {teamName}</h1>
         <h2>Page is made using {componentType}</h2>
+        <ThemeContext.Consumer>
+          {({ color, setColor }) => {
+            return <div>{color}</div>;
+          }}
+        </ThemeContext.Consumer>
         <Outlet />
       </>
     );

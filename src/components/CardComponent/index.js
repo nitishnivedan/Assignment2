@@ -5,9 +5,10 @@ import "./styles-card.css";
 
 const CardComponent = ({
   temmatesDetails: { imageSource, name, location, company, followers },
+  color,
 }) => {
   return (
-    <div className="cardWrapper">
+    <div className="cardWrapper" style={{ backgroundColor: color }}>
       <img
         key={imageSource}
         src={imageSource}

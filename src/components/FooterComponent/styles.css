@@ -1,0 +1,7 @@
+.footerClass {
+  padding: 20px;
+  box-shadow: 0 7px 29px #64646f33;
+  cursor: pointer;
+  height: fit-content;
+  margin-top: 20px;
+}

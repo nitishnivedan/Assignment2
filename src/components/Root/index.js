@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import SearchComponent from "../SearchComponent";
@@ -7,11 +7,13 @@ import NotFoundComponent from "../NothingFoundComponent";
 import teamInformation from "../../common/data.json";
 import { getUserInfo } from "../../apis/userapis";
 import "./styles.css";
+import ThemeContext from "../ThemeContext";
 
 const RootElement = () => {
   const [currentCards, setCurrentCards] = useState(teamInformation);
   const [fullInfoOfUsers, setFullInfoOfUsers] = useState([]);
   const [isDataFetched, setIsDataFetched] = useState(false);
+  const { color, setColor } = useContext(ThemeContext);
 
   useEffect(() => {
     getListOfGitUsers();
@@ -52,7 +54,16 @@ const RootElement = () => {
         setCurrentCards={setCurrentCards}
         teamInformation={isDataFetched ? fullInfoOfUsers : teamInformation}
       />
-
+      <button
+        style={{
+          height: "53px",
+          width: "20%",
+          marginTop: "1%",
+        }}
+        onClick={() => setColor(color === "white" ? "black" : "white")}
+      >
+        Change {color} color
+      </button>
       {currentCards && currentCards.length > 0 ? (
         <div className="bottomDiv">
           {currentCards.map((temmatesDetails) => (
@@ -60,6 +71,7 @@ const RootElement = () => {
               <CardComponent
                 key={temmatesDetails.id}
                 temmatesDetails={temmatesDetails}
+                color={color}
               />
             </Link>
           ))}
