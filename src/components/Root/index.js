@@ -65,7 +65,7 @@ const RootElement = () => {
         Change {color} color
       </button>
       {currentCards && currentCards.length > 0 ? (
-        <div className="bottomDiv">
+        <div className="flex flex-wrap">
           {currentCards.map((temmatesDetails) => (
             <Link to={`/user/${temmatesDetails.id}`} key={temmatesDetails.id}>
               <CardComponent

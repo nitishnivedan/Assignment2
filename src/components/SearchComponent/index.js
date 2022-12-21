@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import "./styles.css";
 import getCity from "../CustomHooks/useCity";
 import StateCityInformation from "../../common/utils/state-city.json";
 
@@ -58,36 +57,38 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
     setCityName(e.target.value);
   };
   return (
-    <form onSubmit={handleOnSubmit}>
-      <div className="searchClass">
+    <div className="m-5 p-5 bg-purple-50">
+      <form onSubmit={handleOnSubmit}>
         <input
           type="text"
+          placeholder="github user"
           value={nameOrDesignation}
           onChange={(event) => {
             setNameOrDesignation(event.target.value);
             setCityName("");
           }}
         />
-        <button className="buttonClass">Search</button>
-      </div>
-
-      <select className="stateClass" value={state} onChange={handleStateChange}>
-        {Object.keys(StateCityInformation).map((StateName) => (
-          <option key={StateName} value={StateName}>
-            {StateName}
-          </option>
-        ))}
-      </select>
-
-      <select value={cityName} onChange={handleCityChange}>
-        {city &&
-          city.map((cities) => (
-            <option key={cities} value={cities}>
-              {cities}
+        <select value={state} onChange={handleStateChange}>
+          {Object.keys(StateCityInformation).map((StateName) => (
+            <option key={StateName} value={StateName}>
+              {StateName}
             </option>
           ))}
-      </select>
-    </form>
+        </select>
+
+        <select value={cityName} onChange={handleCityChange}>
+          {city &&
+            city.map((cities) => (
+              <option key={cities} value={cities}>
+                {cities}
+              </option>
+            ))}
+        </select>
+        <button className="bg-blue-700 h-12 w-28 font-bold m-5 rounded-xl text-white">
+          Search
+        </button>
+      </form>
+    </div>
   );
 };
 
