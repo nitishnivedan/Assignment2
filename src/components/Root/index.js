@@ -54,16 +54,7 @@ const RootElement = () => {
         setCurrentCards={setCurrentCards}
         teamInformation={isDataFetched ? fullInfoOfUsers : teamInformation}
       />
-      <button
-        style={{
-          height: "53px",
-          width: "20%",
-          marginTop: "1%",
-        }}
-        onClick={() => setColor(color === "white" ? "black" : "white")}
-      >
-        Change {color} color
-      </button>
+
       {currentCards && currentCards.length > 0 ? (
         <div className="flex flex-wrap">
           {currentCards.map((temmatesDetails) => (

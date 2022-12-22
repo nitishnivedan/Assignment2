@@ -12,20 +12,23 @@ const Header = () => {
     <>
       <ThemeContext.Provider value={{ color, setColor: setColor }}>
         <div
-          className="flex px-10 py-4 justify-between bg-yellow-50"
-          //style={{ backgroundColor: color }}
+          className={`flex px-10 py-4 justify-between ${
+            color === "purple" ? "bg-purple-50" : "bg-black"
+          }`}
         >
           <img src={logo} className="w-10" height="50" />
-          <div className="font-bold text-3xl">Team Gladiators</div>
+          <div className="font-bold text-3xl text-purple-600">
+            Team Gladiators
+          </div>
           <div className="flex space-x-4 text-2xl underline">
             <Link to="/">
-              <span>Home</span>
+              <span className=" text-purple-600">Home</span>
             </Link>
             <Link to="/search">
-              <span>SearchComponent </span>
+              <span className=" text-purple-600">SearchComponent </span>
             </Link>
             <Link to="/about-me">
-              <span>AboutMe</span>
+              <span className=" text-purple-600">AboutMe</span>
             </Link>
           </div>
         </div>

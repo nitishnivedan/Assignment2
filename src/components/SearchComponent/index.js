@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import getCity from "../CustomHooks/useCity";
 import StateCityInformation from "../../common/utils/state-city.json";
+import ThemeContext from "../ThemeContext";
 
 const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const [nameOrDesignation, setNameOrDesignation] = useState("");
   const [state, setState] = useState("");
   const [cityName, setCityName] = useState("");
+  const { color, setColor } = useContext(ThemeContext);
 
   const city = getCity(state);
   const handleOnSubmit = (event) => {
@@ -86,6 +88,14 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
         </select>
         <button className="bg-blue-700 h-12 w-28 font-bold m-5 rounded-xl text-white">
           Search
+        </button>
+        <button
+          className={`h-12 w-44 font-bold m-5 rounded-xl border-black border-spacing-0  text-pink-500 ${
+            color === "purple" ? "bg-purple-50" : "bg-black"
+          }`}
+          onClick={() => setColor(color === "purple" ? "black" : "purple")}
+        >
+          Change {color} color
         </button>
       </form>
     </div>
