@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import logo from "../../logo/React.webp";
 import FooterComponent from "../FooterComponent";
 import store from "../store";
+import LoginForm from "../LoginForm";
+import LoggedInUser from "../LoggedInUser";
 
 const Header = () => {
   const [color, setColor] = useState("purple");
@@ -33,10 +35,16 @@ const Header = () => {
               <Link to="/about-me">
                 <span className=" text-purple-600">AboutMe</span>
               </Link>
+              <Link to="/">
+                <span className=" text-purple-600">
+                  <LoggedInUser />
+                </span>
+              </Link>
             </div>
           </div>
           <Outlet />
         </ThemeContext.Provider>
+        <LoginForm />
         <FooterComponent />
       </Provider>
     </>
