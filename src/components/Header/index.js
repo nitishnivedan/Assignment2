@@ -1,32 +1,37 @@
-import { createPath, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ThemeContext from "../ThemeContext";
 import { useState } from "react";
 
-import "./styles.css";
 import logo from "../../logo/React.webp";
 import FooterComponent from "../FooterComponent";
 
 const Header = () => {
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("purple");
   return (
     <>
-      <ThemeContext.Provider value={{ color, setColor }}>
-        <div className="header" style={{ backgroundColor: color }}>
-          <div className="headerComponents">
-            <img src={logo} width="50" height="50" />
+      <ThemeContext.Provider value={{ color, setColor: setColor }}>
+        <div
+          className={`flex px-10 py-4 justify-between ${
+            color === "purple" ? "bg-purple-50" : "bg-black"
+          }`}
+        >
+          <img src={logo} className="w-10" height="50" />
+          <div className="font-bold text-3xl text-purple-600">
+            Team Gladiators
           </div>
-          <div className="title">Team Gladiators</div>
+          <div className="flex space-x-4 text-2xl underline">
+            <Link to="/">
+              <span className=" text-purple-600">Home</span>
+            </Link>
+            <Link to="/search">
+              <span className=" text-purple-600">SearchComponent </span>
+            </Link>
+            <Link to="/about-me">
+              <span className=" text-purple-600">AboutMe</span>
+            </Link>
+          </div>
         </div>
-        <span className="linkClass">
-          <Link to="/">Home</Link>
-        </span>
-        <span className="linkClass">
-          <Link to="/search">SearchComponent</Link>
-        </span>
-        <span className="linkClass">
-          <Link to="/about-me">AboutMe</Link>
-        </span>
         <Outlet />
       </ThemeContext.Provider>
       <FooterComponent />

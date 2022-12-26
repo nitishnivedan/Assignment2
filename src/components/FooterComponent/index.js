@@ -7,7 +7,7 @@ const FooterComponent = () => {
   const { color, setColor } = useContext(ThemeContext);
   return (
     <>
-      <div className="footerClass" style={{ backgroundColor: color }}>
+      <div className={`p-6 h-fit bg-${color}-400`}>
         Footer Component Color:{color}
       </div>
     </>
