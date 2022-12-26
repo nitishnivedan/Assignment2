@@ -58,6 +58,10 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const handleCityChange = (e) => {
     setCityName(e.target.value);
   };
+
+  const handleColorChange = () => {
+    setColor(color === "purple" ? "black" : "purple");
+  };
   return (
     <div className="m-5 p-5 bg-purple-50">
       <form onSubmit={handleOnSubmit}>
@@ -93,7 +97,7 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
           className={`h-12 w-44 font-bold m-5 rounded-xl border-black border-spacing-0  text-pink-500 ${
             color === "purple" ? "bg-purple-50" : "bg-black"
           }`}
-          onClick={() => setColor(color === "purple" ? "black" : "purple")}
+          onClick={handleColorChange}
         >
           Change {color} color
         </button>

@@ -7,7 +7,7 @@ import logo from "../../logo/React.webp";
 import FooterComponent from "../FooterComponent";
 
 const Header = () => {
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("purple");
   return (
     <>
       <ThemeContext.Provider value={{ color, setColor: setColor }}>
