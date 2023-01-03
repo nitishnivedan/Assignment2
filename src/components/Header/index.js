@@ -4,7 +4,7 @@ import ThemeContext from "../ThemeContext";
 import { useState } from "react";
 import { Provider } from "react-redux";
 
-import logo from "../../logo/React.webp";
+//import logo from "../../logo/React.webp";
 import FooterComponent from "../FooterComponent";
 import store from "../store";
 import LoginForm from "../LoginForm";
@@ -21,7 +21,13 @@ const Header = () => {
               color === "purple" ? "bg-purple-50" : "bg-black"
             }`}
           >
-            <img src={logo} className="w-10" height="50" />
+            <img
+              src={
+                "https://cdn4.vectorstock.com/i/1000x1000/38/63/gladiator-logo-design-vector-20073863.jpg"
+              }
+              className="w-16 h-20"
+              data-testid="logo"
+            />
             <div className="font-bold text-3xl text-purple-600">
               Team Gladiators
             </div>
