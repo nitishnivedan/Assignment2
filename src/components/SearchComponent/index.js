@@ -1,14 +1,22 @@
 import { useState, useContext } from "react";
+//import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import getCity from "../CustomHooks/useCity";
 import StateCityInformation from "../../common/utils/state-city.json";
 import ThemeContext from "../ThemeContext";
+import { addUser } from "../loginSlice";
 
 const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const [nameOrDesignation, setNameOrDesignation] = useState("");
   const [state, setState] = useState("");
   const [cityName, setCityName] = useState("");
   const { color, setColor } = useContext(ThemeContext);
+
+  const usersInfo = useSelector((store) => store.loginInfo.value);
+  console.log(usersInfo, "usersInfo");
+  const dispatch = useDispatch();
 
   const city = getCity(state);
   const handleOnSubmit = (event) => {
@@ -62,6 +70,14 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
   const handleColorChange = () => {
     setColor(color === "purple" ? "black" : "purple");
   };
+
+  const handleAddUser = () => {
+    dispatch(
+      addUser({
+        name: "nivedan",
+      })
+    );
+  };
   return (
     <div className="m-5 p-5 bg-purple-50">
       <form onSubmit={handleOnSubmit}>
@@ -100,6 +116,14 @@ const SearchComponent = ({ setCurrentCards, teamInformation }) => {
           onClick={handleColorChange}
         >
           Change {color} color
+        </button>
+        <button
+          className={`h-12 w-44 font-bold m-5 rounded-xl border-black border-spacing-0  text-pink-500 ${
+            color === "purple" ? "bg-purple-50" : "bg-black"
+          }`}
+          onClick={handleAddUser}
+        >
+          Add User
         </button>
       </form>
     </div>
